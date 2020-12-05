@@ -8,8 +8,6 @@ class BlogPostPage extends StatefulWidget {
 class _BlogPostPageState extends State<BlogPostPage> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      
-    );
+    return Scaffold();
   }
 }
