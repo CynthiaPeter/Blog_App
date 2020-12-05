@@ -11,6 +11,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomPadding: false,
       appBar: AppBar(
         backgroundColor: Colors.white,
         leading: IconButton(
@@ -63,77 +64,79 @@ class _LoginPageState extends State<LoginPage> {
               TextField(
                 decoration: InputDecoration(
                     contentPadding: EdgeInsets.fromLTRB(20.0, 30.0, 20.0, 0.0),
-                    border: InputBorder.none,
                     hintText: 'Email'),
               ),
               TextField(
                 obscureText: true,
                 decoration: InputDecoration(
                     contentPadding: EdgeInsets.fromLTRB(20.0, 30.0, 20.0, 0.0),
-                    border: InputBorder.none,
-                    hintText: 'password'),
+                    hintText: 'Password'),
               ),
+              SizedBox(height:10),
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   Text('Forgot Password?'),
                 ],
               ),
-             Container(
-                  width: double.infinity,
-                  child: RaisedButton(
-                    elevation: 4.0,
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => BlogPostPage(),
-                        ),
-                      );
-                    },
-                    color: Color(0xffccdfec),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(3),
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child: Text(
-                        'Log In',
-                        style: TextStyle(fontSize: 14, color: Colors.white),
+              SizedBox(height:10),
+              Container(
+                width: double.infinity,
+                child: RaisedButton(
+                  elevation: 4.0,
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => BlogPostPage(),
                       ),
+                    );
+                  },
+                  color: Color(0xffff691c),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(3),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: Text(
+                      'Log In',
+                      style: TextStyle(fontSize: 14, color: Colors.white),
                     ),
                   ),
                 ),
-
-                Row( children: [ 
-                  
-                ],),
-                Container(
-                  width: double.infinity,
-                  child: RaisedButton(
-                    elevation: 4.0,
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => SignUpPage(),
-                        ),
-                      );
-                    },
-                    color: Color(0xffccdfec),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(3),
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child: Text(
-                        'Sign Up',
-                        style: TextStyle(fontSize: 14, color: Colors.white),
+              ),
+              Row(
+                children: [ 
+                  Divider(height: 5, color: Colors.red),
+                 // Text('or'),
+                 // SizedBox(height: 20),
+                ],
+              ),
+              Container(
+                width: double.infinity,
+                child: RaisedButton(
+                  elevation: 4.0,
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => SignUpPage(),
                       ),
+                    );
+                  },
+                  color: Color(0xffccdfec),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(3),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: Text(
+                      'Sign Up',
+                      style: TextStyle(fontSize: 14, color: Colors.brown),
                     ),
                   ),
                 ),
-              
+              ),
             ],
           ),
         ),

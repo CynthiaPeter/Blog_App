@@ -1,4 +1,5 @@
 import 'package:blog_app/Authentication/loginpage.dart';
+import 'package:blog_app/Authentication/signuppage.dart';
 import 'package:blog_app/onboarding.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -41,7 +42,7 @@ class _SplashState extends State<Splash> {
     Navigator.pushReplacement(
       context,
       MaterialPageRoute(
-        builder: (context) => LoginPage(),
+        builder: (context) => SignUpPage(),
       ),
     );
   }
