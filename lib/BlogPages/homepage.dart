@@ -21,6 +21,7 @@ class _HomePageState extends State<HomePage> {
                     radius: 25,
                     child: Icon(Icons.person),
                     backgroundColor: Color(0xffccdfec),
+                    backgroundImage: AssetImage('image/cy.jpg'),
                   ),
                   Icon(Icons.more_horiz),
                 ],
@@ -33,6 +34,7 @@ class _HomePageState extends State<HomePage> {
                   borderRadius: BorderRadius.circular(10),
                   color: Color(0xffff691c),
                 ),
+               // child: Image(image: AssetImage('images/cy.jpg'),),
               ),
               Container(
                 padding: EdgeInsets.only(

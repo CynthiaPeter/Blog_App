@@ -107,7 +107,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
               Row(
                 children: [ 
-                  Divider(height: 5, color: Colors.red),
+                  Divider(height: 10, color: Colors.red, indent: 5.0),
                  // Text('or'),
                  // SizedBox(height: 20),
                 ],
